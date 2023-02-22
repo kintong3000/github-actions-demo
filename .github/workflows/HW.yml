@@ -1,1 +1,19 @@
+name: Run Bash Script
 
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Run Bash Script
+      run: |
+        chmod +x HW.sh
+        ./HW.sh
